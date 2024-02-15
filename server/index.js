@@ -14,8 +14,8 @@ app.use(cors());
 app.post("/order", async (req, res) => {
   try {
     const razorpay = new Razorpay({
-      key_id: process.env.RAZORPAY_KEY_ID,
-      key_secret: process.env.RAZORPAY_SECRET,
+      key_id: process.env.RAZORPAY_KEY_ID, //use your razorpay keyid
+      key_secret: process.env.RAZORPAY_SECRET, // use your razorpay secret
     });
 
     const options = req.body;
